@@ -6,15 +6,15 @@ import Chat from "./Chat";
 function App() {
   //Добавил поле стейта messageList
   const [messageList, setMessageList] = useState([]);
+  const [client, setClient] = useState();
 
   const handleChange = (e) => {
-    let client = { message: e.target.value, author: "anonym" };
-    console.log(client);
+    setClient({ message: e.target.value, author: "anonym" });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Отправлено");
+    setMessageList([client]);
   };
 
   return (
