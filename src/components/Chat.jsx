@@ -8,6 +8,7 @@ const Chat = (props) => {
       <div className="ChatWrapper">
         <ListResponse messageList={props.messageList} />
         <FormMessage
+          inputEmpty={props.inputEmpty}
           handleChange={props.handleChange}
           handleSubmit={props.handleSubmit}
         />

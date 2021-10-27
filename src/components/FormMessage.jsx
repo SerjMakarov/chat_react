@@ -11,6 +11,7 @@ const FormMessage = (props) => {
             className="MainForm__Message"
             type="text"
             name="message"
+            value={props.inputEmpty}
           />
         </label>
         <input

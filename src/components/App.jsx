@@ -6,15 +6,18 @@ import Chat from "./Chat";
 function App() {
   //Добавил поле стейта messageList
   const [messageList, setMessageList] = useState([]);
-  const [client, setClient] = useState();
+  const [inputValue, setInputValue] = useState('');
+  const [inputEmpty, setInputEmpty] = useState();
 
   const handleChange = (e) => {
-    setClient({ message: e.target.value, author: "anonym" });
+    setInputEmpty();
+    setInputValue({ message: e.target.value, author: "anonym" })
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessageList([client]);
+    setMessageList([inputValue, ...messageList]);
+    setInputEmpty('');
   };
 
   return (
@@ -22,6 +25,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Chat
+          inputEmpty={inputEmpty}
           messageList={messageList}
           handleChange={handleChange}
           handleSubmit={handleSubmit}

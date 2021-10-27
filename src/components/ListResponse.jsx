@@ -1,6 +1,8 @@
 import "./ListResponse.css";
 
 const ListResponse = (props) => {
+
+  // console.log(typeof props.messageList);
   return (
     <>
       <div className="ListResponse">
