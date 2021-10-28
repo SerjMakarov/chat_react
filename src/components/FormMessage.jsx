@@ -3,15 +3,16 @@ import "./FormMessage.css";
 const FormMessage = (props) => {
   return (
     <>
-      <form className="MainForm">
+      <form onSubmit={props.handleSubmit} className="MainForm">
         <label className="MainForm__Item">
           <div className="MainForm__Title">Сообщение:</div>
           <input
+            onPaste={props.handleChange}
             onChange={props.handleChange}
             className="MainForm__Message"
             type="text"
             name="message"
-            value={props.inputEmpty}
+            value={props.inputValue}
           />
         </label>
         <input

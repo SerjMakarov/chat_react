@@ -9,7 +9,7 @@ const Chat = (props) => {
         <ListResponse messageList={props.messageList} />
         <FormMessage
           btnLock={props.btnLock}
-          inputEmpty={props.inputEmpty}
+          inputValue={props.inputValue}
           handleChange={props.handleChange}
           handleSubmit={props.handleSubmit}
         />
