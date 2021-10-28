@@ -19,6 +19,7 @@ const FormMessage = (props) => {
           className="MainForm__Btn"
           type="button"
           value="Отправить"
+          disabled={props.btnLock}
         />
       </form>
     </>
