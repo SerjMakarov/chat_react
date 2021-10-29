@@ -4,7 +4,6 @@ import "./App.css";
 import Chat from "./Chat";
 
 function App() {
-  //Добавил поле стейта messageList
   const [messageList, setMessageList] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [messageClient, setMessageClient] = useState('');
@@ -13,7 +12,6 @@ function App() {
   const handleChange = (e) => {
     const message = { message: inputValue, author: "anonym" };
     setInputValue(message.message = e.target.value);
-    console.log(inputValue);
     if (inputValue !== "") {
       setMessageClient(message);
       setBtnLock(false);
@@ -22,12 +20,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessageList([messageClient, ...messageList]);
+    setMessageList([...messageList, messageClient]);
     setBtnLock(true);
     setInputValue("");
   };
-
-  console.log(messageList);
 
   useEffect(() => {
 
