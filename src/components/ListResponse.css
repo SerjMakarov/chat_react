@@ -1,0 +1,26 @@
+.ListResponse {
+  background: #b5b9c2;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.ListResponse ul{
+  padding: 20px;
+}
+
+.Message {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Message:nth-child(odd) {
+  text-align: left;
+  color: #68a755;
+}
+
+.Message:nth-child(even) {
+  text-align: right;
+  color: #4897d8;
+}
