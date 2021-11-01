@@ -1,27 +1,31 @@
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 import "./FormMessage.css";
 
 const FormMessage = (props) => {
   return (
     <>
       <form onSubmit={props.handleSubmit} className="MainForm">
-        <label className="MainForm__Item">
-          <div className="MainForm__Title">Сообщение:</div>
-          <input
-            onPaste={props.handleChange}
-            onChange={props.handleChange}
-            className="MainForm__Message"
-            type="text"
-            name="message"
-            value={props.inputValue}
-          />
-        </label>
-        <input
+        <TextField
+          onPaste={props.handleChange}
+          onChange={props.handleChange}
+          label="Сообщение"
+          className="MainForm__Message"
+          type="text"
+          name="message"
+          value={props.inputValue}
+          autoComplete="off"
+          ref={props.textInput}
+        />
+        <Button
+          variant="contained"
+          endIcon={<SendIcon />}
           onClick={props.handleSubmit}
           className="MainForm__Btn"
-          type="button"
-          value="Отправить"
-          disabled={props.btnLock}
-        />
+        >
+          Отправить
+        </Button>
       </form>
     </>
   );

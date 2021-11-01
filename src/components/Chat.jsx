@@ -10,6 +10,7 @@ const Chat = (props) => {
         <FormMessage
           btnLock={props.btnLock}
           inputValue={props.inputValue}
+          textInput={props.textInput}
           handleChange={props.handleChange}
           handleSubmit={props.handleSubmit}
         />
