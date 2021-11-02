@@ -22,7 +22,6 @@ const FormMessage = (props) => {
           variant="contained"
           endIcon={<SendIcon />}
           onClick={props.handleSubmit}
-          className="MainForm__Btn"
         >
           Отправить
         </Button>

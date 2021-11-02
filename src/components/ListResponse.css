@@ -17,7 +17,7 @@
 
 .Message:nth-child(odd) {
   text-align: left;
-  color: #68a755;
+  color: #666666;
 }
 
 .Message:nth-child(even) {

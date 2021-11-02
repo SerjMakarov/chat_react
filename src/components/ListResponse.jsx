@@ -1,5 +1,9 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
 import "./ListResponse.css";
 
 const ListResponse = (props) => {
@@ -10,7 +14,7 @@ const ListResponse = (props) => {
           {props.messageList.map((val, id) => {
             return (
               <li key={id} className="Message">
-                {val.message}
+                <Typography variant="h6">{val.message}</Typography>
               </li>
             );
           })}
