@@ -12,6 +12,7 @@ export const ListUser = (props) => {
       <Paper className="ListUser" elevation={3}>
         <List>
           {props.arChats.map((value, id) => {
+              value.id = id;
               return (
                 <ListItem key={id}>
                   <ListItemAvatar>

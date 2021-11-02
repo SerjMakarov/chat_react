@@ -5,11 +5,12 @@ import Chat from "./Chat";
 function App() {
   const [messageList, setMessageList] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [arChats, setArChats] = useState([
-    { name: "Сергей", id:''},
-    { name: "Джон", id:'' },
-    { name: "Бил", id:'' },
-    { name: "Иван", id:'' },
+  //Уникальный id присваивается объекту в компоненте ListUser при обходе массива arChats(неуверен, что так делать правильно)
+  const [arChats] = useState([
+    { name: "Сергей", id: "" },
+    { name: "Джон", id: "" },
+    { name: "Бил", id: "" },
+    { name: "Иван", id: "" },
   ]);
   const [messageClient, setMessageClient] = useState("");
   const [btnLock, setBtnLock] = useState(true);
@@ -43,7 +44,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.dir(textInput.current.children[1].firstChild.focus());
+    textInput.current.children[1].firstChild.focus();
 
     const id = setTimeout(() => {
       if (send) {
