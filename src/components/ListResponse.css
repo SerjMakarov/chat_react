@@ -1,11 +1,11 @@
 .ListResponse {
-  background: #b5b9c2;
+  margin-bottom: 10px;
   height: 400px;
   width: 100%;
   overflow-x: hidden;
 }
 
-.ListResponse ul{
+.ListResponse ul {
   padding: 20px;
 }
 
@@ -17,7 +17,7 @@
 
 .Message:nth-child(odd) {
   text-align: left;
-  color: #68a755;
+  color: #666666;
 }
 
 .Message:nth-child(even) {
