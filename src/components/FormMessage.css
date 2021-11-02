@@ -1,8 +1,7 @@
 .MainForm {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  width: 800px;
+  width: 790px;
 }
 
 .MainForm__Item {
@@ -20,7 +19,6 @@
   height: 50px;
   border: 0px;
   font-size: 14px;
-  /* background: #b5b9c2; */
 }
 
 .MainForm__Btn {

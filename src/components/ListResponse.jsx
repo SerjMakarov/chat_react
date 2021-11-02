@@ -6,15 +6,15 @@ const ListResponse = (props) => {
   return (
     <Box>
       <Paper className="ListResponse" elevation={3}>
-          <ul>
-            {props.messageList.map((val, id) => {
-              return (
-                <li key={id} className="Message">
-                  {val.message}
-                </li>
-              );
-            })}
-          </ul>
+        <ul>
+          {props.messageList.map((val, id) => {
+            return (
+              <li key={id} className="Message">
+                {val.message}
+              </li>
+            );
+          })}
+        </ul>
       </Paper>
     </Box>
   );

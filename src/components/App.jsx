@@ -5,6 +5,12 @@ import Chat from "./Chat";
 function App() {
   const [messageList, setMessageList] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [arChats, setArChats] = useState([
+    { name: "Сергей", id:''},
+    { name: "Джон", id:'' },
+    { name: "Бил", id:'' },
+    { name: "Иван", id:'' },
+  ]);
   const [messageClient, setMessageClient] = useState("");
   const [btnLock, setBtnLock] = useState(true);
   const [messageBot] = useState({
@@ -37,7 +43,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.dir(textInput.current.children[1].firstChild.focus())
+    console.dir(textInput.current.children[1].firstChild.focus());
 
     const id = setTimeout(() => {
       if (send) {
@@ -55,6 +61,7 @@ function App() {
           inputValue={inputValue}
           messageList={messageList}
           textInput={textInput}
+          arChats={arChats}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />

@@ -1,10 +1,11 @@
 .ListResponse {
+  margin-bottom: 10px;
   height: 400px;
   width: 100%;
   overflow-x: hidden;
 }
 
-.ListResponse ul{
+.ListResponse ul {
   padding: 20px;
 }
 
