@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import "./App.css";
 import Chat from "./Chat";
+import { Home, Profile } from "../routes/routes";
 
-function App() {
+export default function App() {
   const [messageList, setMessageList] = useState([]);
   const [inputValue, setInputValue] = useState("");
   //Уникальный id присваивается объекту в компоненте ListUser при обходе массива arChats(неуверен, что так делать правильно)
@@ -44,7 +46,7 @@ function App() {
   };
 
   useEffect(() => {
-    textInput.current.children[1].firstChild.focus();
+    console.log(textInput);
 
     const id = setTimeout(() => {
       if (send) {
@@ -55,19 +57,52 @@ function App() {
   }, [messageList]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Chat
-          btnLock={btnLock}
-          inputValue={inputValue}
-          messageList={messageList}
-          textInput={textInput}
-          arChats={arChats}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-      </header>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="chats"
+            element={
+              <div className="App">
+                <header className="App-header">
+                  <Chat
+                    btnLock={btnLock}
+                    inputValue={inputValue}
+                    messageList={messageList}
+                    textInput={textInput}
+                    arChats={arChats}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                  />
+                </header>
+              </div>
+            }
+          />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+      </Routes>
+    </>
+  );
+}
+
+function Layout() {
+  return (
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/chats">Chats</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
     </div>
   );
 }
-export default App;
