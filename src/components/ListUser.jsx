@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -23,10 +23,11 @@ export const ListUser = (props) => {
             value.id = id;
             return (
               <ListItemButton
+                key={id}
                 selected={selectedIndex === id}
                 onClick={(event) => handleListItemClick(event, id)}
               >
-                <ListItem key={id}>
+                <ListItem>
                   <ListItemAvatar>
                     <Avatar></Avatar>
                   </ListItemAvatar>
