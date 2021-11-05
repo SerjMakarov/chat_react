@@ -22,8 +22,12 @@ export const ListUser = (props) => {
           {props.arChats.map((value, id) => {
             value.id = id;
             return (
+<<<<<<< Updated upstream
               <ListItemButton
                 key={id}
+=======
+              <ListItemButton key={id}
+>>>>>>> Stashed changes
                 selected={selectedIndex === id}
                 onClick={(event) => handleListItemClick(event, id)}
               >
