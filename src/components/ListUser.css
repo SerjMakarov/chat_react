@@ -1,4 +1,6 @@
 .ListUser {
   width: 300px;
   margin: 0 10px;
+  height: 400px;
+  overflow-x: hidden;
 }

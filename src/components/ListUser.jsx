@@ -6,6 +6,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemButton from "@mui/material/ListItemButton";
 import Avatar from "@mui/material/Avatar";
 import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
 import "./ListUser.css";
 
 export const ListUser = (props) => {
@@ -19,6 +20,8 @@ export const ListUser = (props) => {
     <>
       <Paper className="ListUser" elevation={3}>
         <List>
+          <Button onClick={props.onCreate}>+</Button>
+          <Button onClick={props.onDelete}>-</Button>
           {props.arChats.map((value, id) => {
             value.id = id;
             return (
