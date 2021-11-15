@@ -12,18 +12,18 @@ import { useCallback, useEffect } from "react";
 const Chat = (props) => {
   const chats = useSelector((state) => state.chats.chats);
   const dispatch = useDispatch();
-  // console.log(chats);
+  console.log(chats);
   const onCreate = useCallback(() => {
     dispatch(
       createChat({
         name: "chatName",
-        id: '',
+        id: "",
       })
     );
   }, []);
 
   const onDelete = (chatId) => {
-    dispatch(removeChat(chatId));
+    dispatch(removeChat(0));
     dispatch(removeMessageByChatID(chatId));
   };
 

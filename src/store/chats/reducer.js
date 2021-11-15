@@ -2,12 +2,7 @@ import { CREATE_CHAT, REMOVE_CHAT, SET_CHATS } from "./actions";
 import { nanoid } from "nanoid";
 
 const initialState = {
-  chats: [
-    { name: "Сергей", id:' ' },
-    { name: "Джон", id: nanoid() },
-    { name: "Бил", id: nanoid() },
-    { name: "Иван", id: nanoid() },
-  ],
+  chats: [],
 };
 
 export const chatsReducer = (state = initialState, action) => {
